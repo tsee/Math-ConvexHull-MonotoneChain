@@ -68,8 +68,10 @@ convex_hull_sorted(points)
     npoints = av_len(points)+1;
     if (npoints <= 2) {
       out_av = newAV();
+      av_fill(out_av, npoints-1);
       for (i = 0; i < npoints; ++i) {
-        av_push(out_av, *av_fetch(points, i, 0));
+        elemptr = av_fetch(points, i, 0);
+        av_store(out_av, i, newSVsv(*elemptr));
       }
       XPUSHs(sv_2mortal(newRV_noinc((SV*)out_av)));
       XSRETURN(1);

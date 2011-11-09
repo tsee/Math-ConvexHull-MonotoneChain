@@ -16,7 +16,7 @@ typedef point_t* point_ptr_t;
  * ccw < 0, and collinear if ccw = 0 because ccw is a determinant that
  * gives the signed area of the triangle formed by p1, p2 and p3.
  */
-STATIC Size_t
+STATIC double
 ccw(point_t* p1, point_t* p2, point_t* p3)
 {
   return (p2->x - p1->x)*(p3->y - p1->y) - (p2->y - p1->y)*(p3->x - p1->x);

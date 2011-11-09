@@ -1,6 +1,8 @@
 # Avoid archives of this distribution
 \bMath-ConvexHull-MonotoneChain-[\d\.\_]+
-
+\b.*\.bs$
+\bMonotoneChain\.c$
+\bMYMETA\..*$
 # Avoid version control files.
 \bRCS\b
 \bCVS\b

@@ -68,6 +68,9 @@ of the points in the convex hull, ordered counter-clockwise.
 
 I<point> refers to an array reference containing an X, and a Y coordinate.
 
+For less than three input points, this will return an array reference
+whose elements are the input points (without cloning).
+
 =head1 SEE ALSO
 
 L<Math::ConvexHull>, which uses Graham's scan in pure Perl.
